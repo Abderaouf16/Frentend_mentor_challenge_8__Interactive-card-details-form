@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor - Interactive card details form</title>
+</head>
+<body>
+  <main>
+    <section class="section1">
+      <div class="bg-imgs">
+        <img class="bg-img-desktop" src="./images/bg-main-desktop.png" alt="">
+        <img class="bg-img-mobile" src="./images/bg-main-mobile.png" alt="">
+      </div>
+      <div class="paymentCard-design">
+        <img class="card-design" src="./images/bg-card-back.png" alt="">
+        <img class="payment-card" src="./images/bg-card-front.png" alt="">
+      </div>
+    </section>
+    <div class="section2">
+      <div class="card-owner">
+        <label for="">Cardholder Name</label>
+        <input type="text" placeholder="e.g. Jane Appleseed">
+      </div>
+      <div class="card-number">
+        <label for="">Card Number</label>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+      </div>
+      <div class="expDate-Cvc-Container">
+
+        <div class="exp-date">
+          <label for=""> Exp. Date (MM/YY)</label>
+          <div class="experation-container">
+            <input id="month" type="text" placeholder="MM">
+            <input id="year" type="text" placeholder="YY">
+          </div>
+        </div>
+        <div class="cvc">
+          <label for="">Cvc</label>
+          <input type="text"placeholder='e.g. 123'>
+        </div>
+      </div>
+      <button type="submit" >Confirm</button>
+    </div>
+  </main>
+</body>
+<script src="app.js"></script>
+</html>

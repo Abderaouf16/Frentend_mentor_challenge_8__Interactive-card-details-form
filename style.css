@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@300&family=Outfit:wght@300&family=Overpass:wght@900&family=Red+Hat+Display:wght@500;700;900&family=Roboto&family=Space+Grotesk:wght@500&display=swap");
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ff);
+}
+
+:root {
+  --col-Red-input-errors: hsl(0, 100%, 66%);
+  --col-White: hsl(0, 0%, 100%);
+  --col-Light-grayish-violet: hsl(270, 3%, 87%);
+  --col-Dark-grayish-violet: hsl(279, 6%, 55%);
+  --col-Very-dark-violet: hsl(278, 68%, 11%);
+  --ff: "Space Grotesk", sans-serif;
+  --fs: 15px;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs);
+  /* background-image: url(./images/image-from-rawpixel-id-4007558-jpeg.jpg); */
+}
+
+main {
+  background-color: aqua;
+    height: 100vh;
+  
+}
+.bg-img-desktop,
+.bg-img-mobile {
+  display: none;
+}
+
+.section2 {
+  /* background-color: bisque; */
+  margin-top: 80px;
+  padding: 20px;
+  height: auto;
+}
+label {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  white-space: nowrap;
+  color: var(--col-Very-dark-violet);
+}
+.card-owner > label {
+  display: block;
+}
+
+input[type="text"] {
+  font-family: var(--ff);
+  width: 100%;
+  padding: 19px;
+  border: 2px solid var(--col-Light-grayish-violet);
+  border-radius: 7px;
+  font-size: 20px;
+  margin: 15px 0 25px 0;
+  color: var(--col-Dark-grayish-violet);
+}
+.expDate-Cvc-Container {
+  display: flex;
+  column-gap: 20px;
+}
+.experation-container {
+  display: flex;
+  column-gap: 20px;
+}
+.cvc {
+  flex: 1;
+}
+.exp-date {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  padding: 23px;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--col-Very-dark-violet);
+  color: var(--col-White);
+  font-size: 23px;
+  margin: 15px 0;
+}
+
+@media (min-width:450px){
+    main{
+
+    }
+    .section1, .section2{
+        flex: 1;
+    }
+    .section1{
+        background-color: cadetblue;
+    }
+    .section2{
+        background-color: blue;
+    }
+}
+@media (max-width: 450px) {
+  main {
+    width: 100%;
+  }
+
+  .bg-img-mobile {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .card-design {
+    width: 80%;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+  }
+  .payment-card {
+    width: 80%;
+    position: absolute;
+    left: 20px;
+    top: 130px;
+  }
+}
