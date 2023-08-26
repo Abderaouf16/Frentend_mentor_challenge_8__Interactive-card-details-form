@@ -27,7 +27,7 @@ body {
 
 main {
   background-color: aqua;
-    height: 100vh;
+   
   
 }
 .bg-img-desktop,
@@ -88,7 +88,52 @@ button {
   font-size: 23px;
   margin: 15px 0;
 }
+.paymentCard-design{
 
+}
+.card-info{
+  background-color: azure;
+  width: 312px;
+  height: 171PX;
+  
+}
+.payment-card{  
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+}
+.cercles{
+  display: flex;
+  align-items: center;
+}
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info p{
+  margin: 0 27px;
+  color: var(--col-Light-grayish-violet);
+}
+.payment-card > p{
+  color: var(--col-White);
+  font-size: 23px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.big-cercle{
+width: 35px;
+height: 35px;
+border-radius: 50%;
+background-color: var(--col-White);
+margin: 20px 10px 25px 20px  ;
+}
+.small-cercle{
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--col-White);
+}
 @media (min-width:450px){
     main{
 
@@ -121,7 +166,12 @@ button {
     left: 60px;
   }
   .payment-card {
-    width: 80%;
+    background-image: url(./images/bg-card-front.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    width: 325px;
+    height: 171px;
     position: absolute;
     left: 20px;
     top: 130px;
