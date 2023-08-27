@@ -15,6 +15,7 @@
   --col-Light-grayish-violet: hsl(270, 3%, 87%);
   --col-Dark-grayish-violet: hsl(279, 6%, 55%);
   --col-Very-dark-violet: hsl(278, 68%, 11%);
+  --input-placeholder-color: rgba(173,216,230,1);
   --ff: "Space Grotesk", sans-serif;
   --fs: 15px;
 }
@@ -22,25 +23,14 @@
 body {
   font-family: var(--ff);
   font-size: var(--fs);
-  /* background-image: url(./images/image-from-rawpixel-id-4007558-jpeg.jpg); */
 }
 
-main {
-  background-color: aqua;
-   
-  
-}
 .bg-img-desktop,
 .bg-img-mobile {
   display: none;
 }
 
-.section2 {
-  /* background-color: bisque; */
-  margin-top: 80px;
-  padding: 20px;
-  height: auto;
-}
+
 label {
   font-size: 15px;
   text-transform: uppercase;
@@ -57,11 +47,13 @@ input[type="text"] {
   font-family: var(--ff);
   width: 100%;
   padding: 19px;
-  border: 2px solid var(--col-Light-grayish-violet);
+  border: 1px solid var(--col-Light-grayish-violet);
   border-radius: 7px;
   font-size: 20px;
   margin: 15px 0 25px 0;
-  color: var(--col-Dark-grayish-violet);
+}
+input[type="text"]::placeholder{
+  color: var(--input-placeholder-color);
 }
 .expDate-Cvc-Container {
   display: flex;
@@ -88,71 +80,151 @@ button {
   font-size: 23px;
   margin: 15px 0;
 }
-.paymentCard-design{
 
-}
-.card-info{
-  background-color: azure;
-  width: 312px;
-  height: 171PX;
-  
-}
-.payment-card{  
+.payment-card {
+  background-image: url(./images/bg-card-front.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
   position: absolute;
   border-radius: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 2.2em;
+  justify-content: space-between;
 }
-.cercles{
+
+
+
+.cercles {
   display: flex;
   align-items: center;
 }
-.info{
+.info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.info p{
-  margin: 0 27px;
+.info p {
   color: var(--col-Light-grayish-violet);
 }
-.payment-card > p{
+.card-info > p {
   color: var(--col-White);
-  font-size: 23px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  font-size: 25px;
+  letter-spacing: 4px;
+  word-spacing: 5px;
+  font-weight: 500;
 }
-.big-cercle{
-width: 35px;
-height: 35px;
-border-radius: 50%;
-background-color: var(--col-White);
-margin: 20px 10px 25px 20px  ;
+.cercles {
+  display: flex;
 }
-.small-cercle{
+.big-cercle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--col-White);
+  margin-right: 1em;
+}
+.small-cercle {
   width: 14px;
   height: 14px;
   border-radius: 50%;
   border: 1px solid var(--col-White);
 }
-@media (min-width:450px){
-    main{
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+}
 
-    }
-    .section1, .section2{
-        flex: 1;
-    }
-    .section1{
-        background-color: cadetblue;
-    }
-    .section2{
-        background-color: blue;
-    }
+@media (min-width: 450px) {
+  main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;   
+    margin: auto;
+  }
+
+  .section1 {
+    background-color: cadetblue;
+    flex: 1;
+  }
+  .section2 {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 0 10em;
+  }
+  .dd{
+    width: 40%;
+    margin-left: 10em;
+  }
+  .bg-img-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .bg-imgs {
+    background-color: aquamarine;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-design {
+    position: absolute;
+    top: 30em;
+    left: 13em;
+    width: 470px;
+    height: 270px;
+  }
+  .payment-card {
+    position: absolute;
+    width: 470px;
+    height: 270px;
+    top: 8em;
+    left: 8em;
+  }
+
+
+
+  input[type="text"] {
+    font-family: var(--ff);
+    padding: 15px;
+    border-radius: 7px;
+    font-size: var(--fs);
+    margin: 15px 0 40px 0;
+
+  }
+
+  
+  button {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--col-Very-dark-violet);
+    color: var(--col-White);
+    font-size: 15px;
+    margin: 35px 0;
+  }
 }
 @media (max-width: 450px) {
   main {
     width: 100%;
   }
-
+  
+  .section2 {
+    margin-top: 80px;
+    padding: 20px;
+    height: auto;
+  }
   .bg-img-mobile {
     display: block;
     width: 100%;
@@ -166,14 +238,31 @@ margin: 20px 10px 25px 20px  ;
     left: 60px;
   }
   .payment-card {
-    background-image: url(./images/bg-card-front.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat; 
-    width: 325px;
-    height: 171px;
+    padding: 1.5rem 1.8rem;
     position: absolute;
+    width: 317px;
+    height: 171px;
     left: 20px;
     top: 130px;
+  }
+
+  .big-cercle {
+    width: 25px;
+    height: 25px;
+  }
+  .small-cercle {
+    width: 10px;
+    height: 10px;
+  }
+  .card-info > p {
+    color: var(--col-White);
+    font-size: 1rem;
+    white-space: nowrap;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    font-weight: 500;
+  }
+  .card-info {
+    height: 45%;
   }
 }
