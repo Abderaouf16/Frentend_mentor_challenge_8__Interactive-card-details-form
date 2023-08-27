@@ -15,7 +15,6 @@
   --col-Light-grayish-violet: hsl(270, 3%, 87%);
   --col-Dark-grayish-violet: hsl(279, 6%, 55%);
   --col-Very-dark-violet: hsl(278, 68%, 11%);
-  --input-placeholder-color: rgba(173,216,230,1);
   --ff: "Space Grotesk", sans-serif;
   --fs: 15px;
 }
@@ -29,7 +28,6 @@ body {
 .bg-img-mobile {
   display: none;
 }
-
 
 label {
   font-size: 15px;
@@ -46,14 +44,14 @@ label {
 input[type="text"] {
   font-family: var(--ff);
   width: 100%;
-  padding: 19px;
+  padding: 15px;
   border: 1px solid var(--col-Light-grayish-violet);
   border-radius: 7px;
-  font-size: 20px;
+  font-size: var(--fs);
   margin: 15px 0 25px 0;
 }
-input[type="text"]::placeholder{
-  color: var(--input-placeholder-color);
+input[type="text"]::placeholder {
+  color: rgb(186, 180, 180);
 }
 .expDate-Cvc-Container {
   display: flex;
@@ -72,12 +70,12 @@ input[type="text"]::placeholder{
 
 button {
   width: 100%;
-  padding: 23px;
+  padding: 17px;
   border: none;
   border-radius: 7px;
   background-color: var(--col-Very-dark-violet);
   color: var(--col-White);
-  font-size: 23px;
+  font-size: var(--fs);
   margin: 15px 0;
 }
 
@@ -94,8 +92,6 @@ button {
   padding: 2em 2.2em;
   justify-content: space-between;
 }
-
-
 
 .cercles {
   display: flex;
@@ -115,6 +111,7 @@ button {
   letter-spacing: 4px;
   word-spacing: 5px;
   font-weight: 500;
+  white-space: nowrap;
 }
 .cercles {
   display: flex;
@@ -139,12 +136,57 @@ button {
   width: 100%;
   height: 40%;
 }
-
-@media (min-width: 450px) {
+@media(min-width:450px) and (max-width:1150px){
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+  }
+  .bg-img-mobile{
+    display: block;
+    width: 100%;
+    height: 18em;
+    position: relative;
+  }
+  .card-design {
+    position: absolute;
+    top: 5%;
+    left: 33%;
+    width: 400px;
+    height: 230px;
+  }
+  .payment-card {
+    position: absolute;
+    width: 400px;
+    height: 230px;
+    left: 22%;
+    top: 20%;
+  }
+  #form {
+    margin-top: 10em;
+    width: 450px;
+    padding: 2em;
+    
+  }
+  .section2 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10em;
+  }
+  .card-info > p{
+    font-size: 20px;
+  }
+}
+@media (min-width: 1150px) {
   main {
     display: flex;
     height: 100vh;
-    width: 100vw;   
+    width: 100vw;
     margin: auto;
   }
 
@@ -153,17 +195,18 @@ button {
     flex: 1;
   }
   .section2 {
-    flex: 3;
+    flex: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     padding: 0 10em;
   }
-  .dd{
-    width: 40%;
+  #form {
+    width: 50%;
     margin-left: 10em;
+    min-width: 20em;
+
   }
   .bg-img-desktop {
     display: block;
@@ -192,18 +235,14 @@ button {
     left: 8em;
   }
 
-
-
   input[type="text"] {
     font-family: var(--ff);
     padding: 15px;
     border-radius: 7px;
     font-size: var(--fs);
     margin: 15px 0 40px 0;
-
   }
 
-  
   button {
     width: 100%;
     padding: 17px;
@@ -219,7 +258,7 @@ button {
   main {
     width: 100%;
   }
-  
+
   .section2 {
     margin-top: 80px;
     padding: 20px;
