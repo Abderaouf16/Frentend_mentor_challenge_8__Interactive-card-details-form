@@ -23,7 +23,7 @@
           <div class="card-info">
             <p> 0000 0000 0000 0000</p>
             <div class="info">
-              <p>Jane Appleseed</p>
+              <p id="printed-owner">Jane Appleseed</p>
               <p> 00/00</p>
             </div>
           </div>
@@ -33,25 +33,28 @@
     <div class="section2">
       <form id="form" action="">
         <div class="card-owner">
-          <label for="">Cardholder Name</label>
-          <input type="text" placeholder="e.g. Jane Appleseed">
+          <label for="owner-name">Cardholder Name</label>
+          <input class="input" id="owner-name" type="text" placeholder="e.g. Jane Appleseed"required>
+          <div id="message" class=""></div>
         </div>
         <div class="card-number">
-          <label for="">Card Number</label>
-          <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <label for="card-num">Card Number</label>
+          <input id="card-num" type="text" placeholder="e.g. 1234 5678 9123 0000" required>
+          <div id="message" class=""></div>
+
         </div>
         <div class="expDate-Cvc-Container">
 
           <div class="exp-date">
             <label for=""> Exp. Date (MM/YY)</label>
             <div class="experation-container">
-              <input id="month" type="text" placeholder="MM">
-              <input id="year" type="text" placeholder="YY">
+              <input id="month" type="text" placeholder="MM"required>
+              <input id="year" type="text" placeholder="YY"required>
             </div>
           </div>
           <div class="cvc">
-            <label for="">Cvc</label>
-            <input type="text" placeholder='e.g. 123'>
+            <label for="cvc-num">Cvc</label>
+            <input id="cvc-num" type="text" placeholder='e.g. 123' required>
           </div>
         </div>
         <button type="submit">Confirm</button>
