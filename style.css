@@ -34,12 +34,29 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/*for validation message*/
+.message {
+  font-size: 12px;
+  color: red;
+}
 .paymentCard-design {
   background-image: url(./images/bg-card-back.png);
   background-size: cover;
   width: 350px;
   height: 190px;
+  border-radius: 10px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paymentCard-design p {
+  margin-left: auto;
+  margin-right: 0.7em;
+  color: var(--col-Light-grayish-violet);
+  font-weight: 500;
+  font-size: 19px;
 }
 
 label {
@@ -64,11 +81,10 @@ input[type="text"] {
   font-size: var(--fs);
   margin-top: 15px;
   margin-bottom: 5px;
- 
 }
- input:focus{
+input:focus {
   outline: none; /* Remove the default focus outline */
-   border-color: blue; /* Set the border color when focused */
+  border-color: blue; /* Set the border color when focused */
 }
 input[type="text"]::placeholder {
   color: rgb(186, 180, 180);
@@ -208,6 +224,10 @@ button {
   .card-info > p {
     font-size: 17px;
   }
+  .big-cercle {
+    width: 30px;
+    height: 30px;
+  }
 }
 @media (min-width: 1150px) {
   main {
@@ -230,6 +250,9 @@ button {
     justify-content: center;
     padding: 0 10em;
   }
+  .paymentCard-design p {
+    margin-top: 5px;
+  }
   #form {
     width: 50%;
     margin-left: 10em;
@@ -249,7 +272,7 @@ button {
   input[type="text"] {
     padding: 15px;
     border-radius: 7px;
-    margin: 10px 0 35px 0;
+    margin: 10px 0 5px 0;
   }
 
   button {
@@ -336,11 +359,4 @@ button {
     height: 171px;
     transform: translate(-10%, 10%);
   }
-}
-
-
-#message{
-font-size: 12px;
-color: red;
-
 }

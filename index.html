@@ -12,33 +12,34 @@
 <body>
   <main>
     <section class="section1">
-      
+
       <div class="paymentCard-design">
+        <p id="printed-cvc" class="card-pin">000</p>
       </div>
-        <div class="payment-card">
-          <div class="cercles">
-            <div class="big-cercle"></div>
-            <div class="small-cercle"></div>
+      <div class="payment-card">
+        <div class="cercles">
+          <div class="big-cercle"></div>
+          <div class="small-cercle"></div>
+        </div>
+        <div class="card-info">
+          <p id="printed-CardNumber"> 0000 0000 0000 0000</p>
+          <div class="info">
+            <p id="printed-owner">Jane Appleseed</p>
+            <p>
+              <span id="printed-month">00</span> <span>/</span> <span id="printed-year">00</span>
+
+
+            </p>
           </div>
-          <div class="card-info">
-            <p id="printed-CardNumber"> 0000 0000 0000 0000</p>
-            <div class="info">
-              <p id="printed-owner">Jane Appleseed</p>
-              <p >
-                <span id="printed-month" >00</span> <span>/</span> <span id="printed-year">00</span>
-                
-               
-               </p>
-            </div>
-          </div>
-        
+        </div>
+
       </div>
     </section>
     <div class="section2">
       <form id="form" action="">
         <div class="card-owner">
           <label for="owner-name">Cardholder Name</label>
-          <input class="input" id="owner-name" type="text" placeholder="e.g. Jane Appleseed"required>
+          <input class="input" id="owner-name" type="text" placeholder="e.g. Jane Appleseed" required>
           <div id="1" class="message"></div>
         </div>
         <div class="card-number">
@@ -52,11 +53,11 @@
           <div class="exp-date">
             <label for=""> Exp. Date (MM/YY)</label>
             <div class="experation-container">
-              <input id="month" type="text" placeholder="MM"required>
-            
+              <input id="month" type="text" placeholder="MM" required>
 
-              <input id="year" type="text" placeholder="YY"required>
-              
+
+              <input id="year" type="text" placeholder="YY" required>
+
             </div>
             <div id="3" class="message"></div>
           </div>
